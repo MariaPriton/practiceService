@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Email Template</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+<p th:text="${message}"></p>
+<ul>
+    <li th:each="item : ${itemList}" th:text="${item}"></li>
+</ul>
+
+<!--<ul>
+    <li th:each="item : ${objectList}" >
+        <h1 th:text="${item.name}"></h1>
+        <h2 th:text="${item.age}"></h2>
+        <h2 th:text="${item.status}"></h2>
+    </li>
+</ul>-->
+
+<!--
+<div style="background-color:red;" th:each="kiviStarList : ${branchObjectList}">
+    <h3>Data</h3>
+    <div style="background-color:blue; color:white; margin:0.6rem" th:each="kiviStar : ${kiviStarList.mailPayloadList}">
+        <h3 th:text="${kiviStar.name}"></h3>
+        <h4 th:text="${kiviStar.age}"></h4>
+        <h4 th:text="${kiviStar.status}"></h4>
+    </div>
+    &lt;!&ndash;<div style="background-color:blue; color:white; margin:0.6rem" th:each="kiviStar : ${kiviStarList}">
+        <h3 th:text="${kiviStar.name}"></h3>
+        <h4 th:text="${kiviStar.age}"></h4>
+        <h4 th:text="${kiviStar.status}"></h4>
+    </div>&ndash;&gt;
+</div>
+-->
+
+<img th:src="'data:image/png;base64,' + ${base64Image}" alt="Image" />
+
+<div class="bg-black container" >
+    <h1>Priton</h1>
+</div>
+
+<div style="width:400px; height:400px; background-color:black; color:white;" >
+    <h1>Priton</h1>
+</div>
+</body>
+</html>
